@@ -1,0 +1,2 @@
+PROJEKT2: main.c pobierz.c wczytaj.c
+        gcc -o PROJEKT2 dane.h main.c pobierz.c wczytaj.c -I. -pedantic
