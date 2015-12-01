@@ -19,7 +19,8 @@ int main()
     dodajElement(doDodania);
     wyswietlWszystko();
 
-/*WAZNE!!!*/
+/*WAZNE!!!
+  Zwolnienie pamieci po zakonczeniu uzywania*/
     free(tablicaLiczb);
     return 0;
 }
