@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 int* tablicaLiczb;
-int rozmiarTablicy = 0; /*Zamiast rozmiaru mo¿na u¿ywaæ sizeof(tablicaLiczb)/sizeOf(rozmiarTablicy)
-                         ALE mog¹ siê pojawiæ b³êdy*/
+int rozmiarTablicy = 0; /*Zamiast rozmiaru mo¿na u¿ywaæ sizeof(tablicaLiczb)/sizeOf(int)*/
 
 void dodajElement(int);
 void wyswietlWszystko();
@@ -11,13 +10,11 @@ void wyswietlWszystko();
 int main()
 {
     int doDodania = 2;
-    dodajElement(doDodania);
-
-    doDodania = 5;
-    dodajElement(doDodania);
-
-    doDodania = 34;
-    dodajElement(doDodania);
+    for (;doDodania<10; doDodania+=2)
+    {
+        dodajElement(doDodania);
+    }
+    
     wyswietlWszystko();
 
 /*WAZNE!!!
