@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 int* tablicaLiczb;
-int rozmiarTablicy = 0;
+int rozmiarTablicy = 0; /*Zamiast rozmiaru mo¿na u¿ywaæ sizeof(tablicaLiczb)/sizeOf(rozmiarTablicy)
+                         ALE mog¹ siê pojawiæ b³êdy*/
 
 void dodajElement(int);
 void wyswietlWszystko();
