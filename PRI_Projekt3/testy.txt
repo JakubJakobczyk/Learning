@@ -1,0 +1,82 @@
+$1
+1=2and3
+2=4or5
+3=not6
+test 000
+test 100
+4=7and8
+5=not9
+6=10and11
+test 01101
+show
+# //wynik - taki jak na kartce
+
+$2
+1=2or3
+2=4or5
+3=5or6
+6=7or3
+# //Blad przy ostatnim poleceniu (sprzezenie zwrotne)
+
+$3
+2=3or5
+# //Blad
+
+$4
+1=1or3
+# //Blad (sprzezenie zwrotne)
+
+$5
+1=or3
+# //Blad - nieznane polecenie
+
+$6
+1=cos4
+# //Blad - nieznane polecenie
+
+$7
+1=2or3
+2=4or5
+3=2or6
+# //Bez bledu
+
+$8
+1=0or5
+# //Blad - nie moze byc 0
+
+$9
+test 1
+# //Wynik: 1
+
+$10
+1=2or3
+3=4or5
+2=4or5
+show
+# //Wynik: Wejscia: 4 5
+
+$11
+1=not2r
+# //Blad
+
+$12
+1=not2
+test 1
+#// Wynik: 0
+
+$13
+1=3or2
+show
+# // Wynik: Wejscia: 2 3
+
+$14
+1=2or3
+2=not3
+test 0
+test 1
+# //Za kazdym razem wynik: 1
+
+$15
+1=2or2
+show
+# //Wejscia: 2
