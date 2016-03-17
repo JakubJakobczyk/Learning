@@ -1,3 +1,10 @@
+/*
+Projekt: 1012
+Autor: Jakub Jakobczyk
+Prowadzacy: Piotr Witonski
+*/
+
+
 #include <iostream>
 #include <math.h>
 
@@ -7,9 +14,7 @@
 using namespace std;
 
 
-
-//Ulamek rzecz;
-//Ulamek uroj;
+//Konstruktory
 
 Zespolone::Zespolone(int a, int b, int c, int d)
 {
@@ -38,12 +43,7 @@ Zespolone::Zespolone()
     uroj = Ulamek();
 }
 
-ostream & operator<< (ostream &wyjscie, const Zespolone z)
-{
-	//cout<<"z.rzecz - "<<z.rzecz<<endl;
-	//cout<<"z.rzecz.licznik"<<z.rzecz.licznik<<endl;
-    return wyjscie<<z.rzecz.licznik<<"/"<<z.rzecz.mianownik<<"+"<<z.uroj.licznik<<"/"<<z.uroj.mianownik<<"j";
-}
+//przeciazone operatory klasy Zespolone
 
 Zespolone Zespolone::operator+ (Zespolone &z)
 {
@@ -114,6 +114,8 @@ void Zespolone::operator*= (Zespolone &z)
     uroj = u;
 }
 
+//Funkcje
+
 double Zespolone::mod()
 {
     Ulamek a, b;
@@ -125,11 +127,19 @@ double Zespolone::mod()
     return sqrt(a.getDouble());
 }
 
+//Destruktor
+
 Zespolone::~Zespolone()
 {
     #ifdef _DEBUG
     cout<<"Destruktor l. zespolonej "<<rzecz<<"+"<<uroj<<"j"<<endl;
     #endif
 }
-//ostream & operator<< (ostream &wyjscie, const Zespolone &z)
+
+//Przeciazony strumien
+
+ostream & operator<< (ostream &wyjscie, const Zespolone& z)
+{
+    return wyjscie<<z.rzecz<<"+"<<z.uroj<<"j";
+}
 
